@@ -13,6 +13,12 @@ export function initNav({ lenis } = {}) {
     menu.classList.toggle('is-open', open);
     toggle.setAttribute('aria-expanded', String(open));
     toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    // Don't let the page scroll away underneath an open menu. Closing always
+    // restarts, so crossing to the desktop breakpoint can't strand it stopped.
+    if (lenis) {
+      if (open && !desktop.matches) lenis.stop();
+      else lenis.start();
+    }
   };
 
   toggle.addEventListener('click', () => {
@@ -36,9 +42,9 @@ export function initNav({ lenis } = {}) {
 
   desktop.addEventListener('change', () => setOpen(false));
 
-  // In-page anchors — offset by the nav height so headings clear the bar.
-  const navHeight = () => nav.getBoundingClientRect().height;
-
+  // In-page anchors. Clearance under the fixed bar comes from the CSS
+  // `scroll-margin-top` on [id] — Lenis and native scrolling both honour it, so
+  // there is one source of truth and no double offset.
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
     link.addEventListener('click', (event) => {
       const id = link.getAttribute('href');
@@ -49,12 +55,10 @@ export function initNav({ lenis } = {}) {
       event.preventDefault();
       setOpen(false);
 
-      const offset = -(navHeight() + 16);
       if (lenis) {
-        lenis.scrollTo(target, { offset, duration: 1.15 });
+        lenis.scrollTo(target, { duration: 1.15 });
       } else {
-        const top = target.getBoundingClientRect().top + window.scrollY + offset;
-        window.scrollTo({ top, behavior: 'auto' });
+        target.scrollIntoView({ block: 'start', behavior: 'auto' });
       }
 
       // Keep keyboard focus with the destination.

@@ -144,9 +144,10 @@ main, .nav, .footer { position: relative; z-index: 2; }
   display: grid;
   gap: 0.4rem;
   padding: 0.85rem var(--gutter) 1.35rem;
-  background: rgb(5 11 22 / 0.94);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
+  /* Opaque on purpose. The nav bar's own backdrop-filter makes it a backdrop
+     root, so a blur on this panel would sample nothing and the hero headline
+     would ghost straight through the menu. */
+  background: linear-gradient(to bottom, #071223, var(--ink-900));
   border-bottom: 1px solid rgb(var(--ice-300-rgb) / 0.14);
   box-shadow: 0 24px 50px rgb(0 0 0 / 0.55);
   opacity: 0;
@@ -239,6 +240,13 @@ main, .nav, .footer { position: relative; z-index: 2; }
   flex-wrap: wrap;
   gap: 0.85rem;
   margin-top: clamp(2rem, 5vw, 2.75rem);
+}
+
+@media (min-width: 1700px) {
+  .hero__inner { max-width: 54rem; }
+  .hero__title { font-size: 11rem; }
+  .hero__tagline { font-size: 1.85rem; }
+  .hero__lede { font-size: 1.25rem; }
 }
 
 /* Scroll cue */

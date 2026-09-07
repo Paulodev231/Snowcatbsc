@@ -41,17 +41,27 @@ const TIERS = {
 
 export function detectQuality() {
   const w = window.innerWidth;
+  const h = window.innerHeight;
   const coarse = window.matchMedia('(pointer: coarse)').matches;
   const cores = navigator.hardwareConcurrency || 4;
   const memory = navigator.deviceMemory || 4;
 
   let tier = 'high';
   if (coarse || w < 1024) tier = 'medium';
-  if (w < 560 || cores <= 4 || memory <= 3) tier = 'low';
+  // A low core count only means "weak" on a small or touch device — plenty of
+  // perfectly capable desktops report four.
+  if (w < 560 || memory <= 3 || (cores <= 4 && (coarse || w < 1280))) tier = 'low';
 
   const preset = TIERS[tier];
+
+  // The snow field is sized to the frustum, so a wide viewport spreads the same
+  // particles over a bigger box. Scale the count with aspect to hold density.
+  const aspect = w / Math.max(1, h);
+  const densityScale = Math.min(1.5, Math.max(1, aspect / 1.5));
+
   return {
     ...preset,
+    snowCount: Math.round(preset.snowCount * densityScale),
     // Hard cap at 2 regardless of the device's real ratio.
     pixelRatio: Math.min(window.devicePixelRatio || 1, preset.dprCap, 2),
   };

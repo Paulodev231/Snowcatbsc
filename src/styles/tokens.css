@@ -77,3 +77,12 @@
     --glass-blur: blur(14px) saturate(120%);
   }
 }
+
+/* Very wide displays: let the content grow rather than stranding a 1180px
+   column in the middle of a 2560px screen. */
+@media (min-width: 1700px) {
+  :root {
+    --shell: 1360px;
+    --gutter: 3.5rem;
+  }
+}
