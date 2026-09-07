@@ -34,9 +34,12 @@ export function initContract() {
   render();
   window.addEventListener('resize', render, { passive: true });
 
-  // The full address stays available to screen readers and to copy/paste
-  // regardless of what is rendered.
-  value.setAttribute('aria-label', `Contract address ${address.split('').join(' ')}`);
+  // Full address on hover, and — since the visible text is aria-hidden and may
+  // be truncated — a spaced-out copy for screen readers, which reads it
+  // character by character rather than as one unpronounceable word.
+  value.setAttribute('title', address);
+  const full = document.getElementById('ca-full');
+  if (full) full.textContent = `Contract address ${address.split('').join(' ')}`;
 
   // ── Copy ─────────────────────────────────────────────────────────────
   let timer = null;

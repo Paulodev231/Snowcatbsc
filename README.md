@@ -55,20 +55,19 @@ The address appears in **three places**, and all three must match.
 
 Open `index.html` and search for `0x18D1632B`. You'll find it in:
 
-1. The **contract panel** — three times in the same block. Replace all three:
+1. The **contract panel** — twice, in the same block. Replace both:
 
    ```html
-   <p class="contract__value" id="ca-value"
-      data-address="0xYOURNEWADDRESS"      ← the one that gets copied
-      title="0xYOURNEWADDRESS">            ← the browser tooltip
-     0xYOURNEWADDRESS                      ← what's printed on screen
+   <p class="contract__value" id="ca-value" aria-hidden="true"
+      data-address="0xYOURNEWADDRESS">   ← the one that gets copied
+     0xYOURNEWADDRESS                    ← fallback if JavaScript is off
    </p>
-   <button ... data-copy="0xYOURNEWADDRESS">
    ```
 
-   > `data-address` is the one the Copy button actually puts on the clipboard.
-   > The visible text is shortened on narrow phones (`0x18D1632B3…3d6F983b6`),
-   > but the **full** address is always what gets copied.
+   > `data-address` is the real one — it's what the Copy button puts on the
+   > clipboard, and the page rewrites the visible text from it on load. On
+   > narrow phones that text is shortened to `0x18D1632B3…3d6F983b6`, but the
+   > **full** address is always what gets copied.
 
 2. The **footer**, inside `<p class="footer__ca">`:
 

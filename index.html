@@ -124,13 +124,18 @@
           </div>
 
           <div class="contract__row">
-            <p class="contract__value" id="ca-value"
-               data-address="0x18D1632B35071CD965B0679854E28383d6F983b6"
-               title="0x18D1632B35071CD965B0679854E28383d6F983b6">
+            <!-- data-address is the source of truth: it is what gets copied,
+                 and JS rewrites the visible text from it (middle-truncated on
+                 narrow screens). The text below is the no-JS fallback.
+                 aria-hidden, because the truncated form would mislead a screen
+                 reader — #ca-full carries the real address instead. -->
+            <p class="contract__value" id="ca-value" aria-hidden="true"
+               data-address="0x18D1632B35071CD965B0679854E28383d6F983b6">
               0x18D1632B35071CD965B0679854E28383d6F983b6
             </p>
+            <span class="visually-hidden" id="ca-full"></span>
             <button class="btn btn--solid contract__copy" id="ca-copy"
-                    data-copy="0x18D1632B35071CD965B0679854E28383d6F983b6"
+                    aria-describedby="ca-full"
                     data-label="Copy">
               <svg class="contract__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <rect x="9" y="9" width="12" height="12" rx="2.5" />
