@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+  <title>SNOWCAT ($SNCAT) — The Coldest Revolution</title>
+  <meta name="description" content="SNOWCAT ($SNCAT) is a memecoin on BNB Smart Chain. 200,000,000 supply, 5% burned, liquidity locked for 5 years, ownership renounced. The Coldest Revolution." />
+  <meta name="theme-color" content="#050B16" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="canonical" href="https://snowcatbsc.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="SNOWCAT" />
+  <meta property="og:url" content="https://snowcatbsc.com/" />
+  <meta property="og:title" content="SNOWCAT ($SNCAT) — The Coldest Revolution" />
+  <meta property="og:description" content="A memecoin on BNB Smart Chain. 200,000,000 supply, 5% burned, liquidity locked 5 years, ownership renounced." />
+  <meta property="og:image" content="https://snowcatbsc.com/images/hero-cat.jpg" />
+  <meta property="og:image:width" content="1256" />
+  <meta property="og:image:height" content="1256" />
+  <meta property="og:image:alt" content="SNOWCAT, a white cat in goggles and a puffer jacket, holding a $SNOWCAT snowboard in the mountains." />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- X / Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@SnowCatBSC" />
+  <meta name="twitter:creator" content="@SnowCatBSC" />
+  <meta name="twitter:title" content="SNOWCAT ($SNCAT) — The Coldest Revolution" />
+  <meta name="twitter:description" content="A memecoin on BNB Smart Chain. 200,000,000 supply, 5% burned, liquidity locked 5 years, ownership renounced." />
+  <meta name="twitter:image" content="https://snowcatbsc.com/images/hero-cat.jpg" />
+  <meta name="twitter:image:alt" content="SNOWCAT, a white cat in goggles and a puffer jacket, holding a $SNOWCAT snowboard in the mountains." />
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/images/hero-cat.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="image" href="/images/hero-cat.jpg" fetchpriority="low" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ── Fixed WebGL backdrop ─────────────────────────────────────────── -->
+  <div id="webgl" aria-hidden="true"><canvas id="scene-canvas"></canvas></div>
+  <div id="ice-flash" aria-hidden="true"></div>
+  <div id="vignette" aria-hidden="true"></div>
+
+  <!-- ── Nav ──────────────────────────────────────────────────────────── -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="wordmark" href="#top" aria-label="SNOWCAT — home">
+        <span>SNOW</span>
+        <svg class="wordmark__flake" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+            <path d="M12 2v20M3.34 7l17.32 10M3.34 17L20.66 7" />
+            <path d="M12 5.6 9.9 3.5M12 5.6l2.1-2.1M12 18.4l-2.1 2.1M12 18.4l2.1 2.1" />
+            <path d="m6.2 8.9-2.87-.77M6.2 8.9l.77-2.87M17.8 15.1l2.87.77M17.8 15.1l-.77 2.87" />
+            <path d="m6.2 15.1-.77 2.87M6.2 15.1l-2.87.77M17.8 8.9l.77-2.87M17.8 8.9l2.87-.77" />
+          </g>
+        </svg>
+        <span>CAT</span>
+      </a>
+
+      <button class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span class="nav__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+      </button>
+
+      <nav class="nav__menu" id="nav-menu" aria-label="Main">
+        <ul>
+          <li><a href="#contract">Contract</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#tokenomics">Tokenomics</a></li>
+          <li><a href="#mission">Mission</a></li>
+          <li><a href="#community">Community</a></li>
+        </ul>
+        <a class="btn btn--solid btn--sm" href="https://t.me/SnowCatBSC" target="_blank" rel="noopener noreferrer">Join Snowpack</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ── Hero ───────────────────────────────────────────────────────── -->
+    <section class="section hero" id="top">
+      <div class="shell hero__inner">
+        <p class="badge" data-reveal>
+          <span class="badge__dot" aria-hidden="true"></span>
+          BSC Chain <span aria-hidden="true">·</span> $SNCAT
+        </p>
+
+        <h1 class="hero__title" data-reveal>SNOWCAT</h1>
+        <p class="hero__tagline" data-reveal>The Coldest Revolution</p>
+
+        <p class="hero__lede" data-reveal>
+          Born from the frozen peaks of meme culture. SNOWCAT came down the mountain with a
+          snowboard, a community and nothing to lose — the coldest cat on BNB Smart Chain.
+        </p>
+
+        <div class="hero__actions" data-reveal>
+          <a class="btn btn--solid" href="https://t.me/SnowCatBSC" target="_blank" rel="noopener noreferrer">Join Snowpack</a>
+          <a class="btn btn--ghost" href="#tokenomics">View Tokenomics</a>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#contract" aria-label="Scroll to contract address">
+        <span aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- ── Contract ───────────────────────────────────────────────────── -->
+    <section class="section section--tight" id="contract" aria-labelledby="contract-h">
+      <div class="shell">
+        <div class="glass contract" data-reveal>
+          <div class="contract__head">
+            <h2 class="contract__label" id="contract-h">Contract Address</h2>
+            <span class="contract__chain">BNB Smart Chain</span>
+          </div>
+
+          <div class="contract__row">
+            <p class="contract__value" id="ca-value"
+               data-address="0x18D1632B35071CD965B0679854E28383d6F983b6"
+               title="0x18D1632B35071CD965B0679854E28383d6F983b6">
+              0x18D1632B35071CD965B0679854E28383d6F983b6
+            </p>
+            <button class="btn btn--solid contract__copy" id="ca-copy"
+                    data-copy="0x18D1632B35071CD965B0679854E28383d6F983b6"
+                    data-label="Copy">
+              <svg class="contract__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="9" y="9" width="12" height="12" rx="2.5" />
+                <path d="M15 5.5A2.5 2.5 0 0 0 12.5 3h-7A2.5 2.5 0 0 0 3 5.5v7A2.5 2.5 0 0 0 5.5 15" />
+              </svg>
+              <span class="contract__copy-text">Copy</span>
+            </button>
+          </div>
+
+          <p class="contract__note">Always verify the address before you buy. This is the only $SNCAT contract.</p>
+          <p class="visually-hidden" role="status" aria-live="polite" id="ca-status"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── About ──────────────────────────────────────────────────────── -->
+    <section class="section" id="about" aria-labelledby="about-h">
+      <div class="shell split">
+        <figure class="glass frame" data-reveal>
+          <img src="/images/hero-cat.jpg" width="1256" height="1256" loading="lazy" decoding="async"
+               alt="SNOWCAT, a white cat in ski goggles and a black puffer jacket, holding a $SNOWCAT snowboard on a snowy mountainside." />
+        </figure>
+
+        <div class="split__copy" data-reveal>
+          <p class="eyebrow">About</p>
+          <h2 class="h2" id="about-h">Cool. Fluffy. Unstoppable.</h2>
+          <p>
+            SNOWCAT is a memecoin on BNB Smart Chain, and it is honest about being exactly that —
+            a community, a mascot and a very cold sense of humour. No promises, no roadmap theatre,
+            no utility fan fiction. Just $SNCAT and the people holding it.
+          </p>
+          <p>
+            What we can point at is on-chain and permanent. 200,000,000 tokens, 5% already burned,
+            liquidity locked for five years and ownership renounced. The keys are gone. Nobody can
+            mint more, drain the pool or change the rules — not the team, not anyone.
+          </p>
+          <a class="btn btn--ghost" href="#tokenomics">See the numbers</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Tokenomics ─────────────────────────────────────────────────── -->
+    <section class="section" id="tokenomics" aria-labelledby="tokenomics-h">
+      <div class="shell">
+        <header class="section__head" data-reveal>
+          <p class="eyebrow">Tokenomics</p>
+          <h2 class="h2" id="tokenomics-h">Frozen solid, on purpose</h2>
+          <p class="section__sub">Four numbers. All of them locked in at launch.</p>
+        </header>
+
+        <ul class="cards">
+          <li class="glass card" data-reveal>
+            <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="8" ry="3.2" /><path d="M4 6v5c0 1.77 3.58 3.2 8 3.2s8-1.43 8-3.2V6" /><path d="M4 11.5V17c0 1.77 3.58 3.2 8 3.2s8-1.43 8-3.2v-5.5" /></svg>
+            </span>
+            <p class="card__value"><span data-count-to="200000000">200,000,000</span></p>
+            <h3 class="card__title">Total Supply</h3>
+            <p class="card__note">Fixed at 200,000,000 $SNCAT. Minting is not possible.</p>
+          </li>
+
+          <li class="glass card" data-reveal>
+            <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2.5s5.5 4.4 5.5 9.2a5.5 5.5 0 0 1-11 0C6.5 8.4 9 6.6 9 6.6s.4 2.4 1.7 2.4c1.4 0 1.3-3.1 1.3-6.5Z" /><path d="M12 20.8a3 3 0 0 0 3-3c0-1.9-3-4-3-4s-3 2.1-3 4a3 3 0 0 0 3 3Z" /></svg>
+            </span>
+            <p class="card__value">5%</p>
+            <h3 class="card__title">Burned</h3>
+            <p class="card__note">5% of supply sent to the burn address. Gone for good.</p>
+          </li>
+
+          <li class="glass card" data-reveal>
+            <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="4" y="10.5" width="16" height="10.5" rx="2.5" /><path d="M8 10.5V7.8a4 4 0 0 1 8 0v2.7" /><path d="M12 14.6v2.6" /></svg>
+            </span>
+            <p class="card__value">5 Years</p>
+            <h3 class="card__title">Liquidity Locked</h3>
+            <p class="card__note">The liquidity pool is locked for five years. No rug possible.</p>
+          </li>
+
+          <li class="glass card" data-reveal>
+            <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M20.5 6.5 9.8 17.2l-4.3-4.3" /><circle cx="12" cy="12" r="9.2" opacity=".45" /></svg>
+            </span>
+            <p class="card__value">100%</p>
+            <h3 class="card__title">Ownership Renounced</h3>
+            <p class="card__note">Contract ownership is renounced. The rules cannot change.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ── Mission ────────────────────────────────────────────────────── -->
+    <section class="section section--flush" id="mission" aria-labelledby="mission-h">
+      <div class="mission">
+        <img class="mission__bg" src="/images/lunar-cat.jpg" width="1024" height="1024" loading="lazy" decoding="async"
+             alt="SNOWCAT in sunglasses beside a stealth aircraft on an icy lunar pad, holding a blue rocket." />
+        <div class="mission__veil" aria-hidden="true"></div>
+
+        <div class="shell mission__shell">
+          <div class="glass mission__panel" data-reveal>
+            <p class="eyebrow">Mission</p>
+            <h2 class="h2" id="mission-h">Lunar Deployment Wing</h2>
+            <p>
+              The mission has never been complicated: hold the line, grow the pack, and stay
+              colder than everything else on the chain. Community first, memes always, and a
+              contract nobody can tamper with.
+            </p>
+            <p>
+              Every holder is part of the wing. Bring your friends, bring your worst jokes,
+              bring a coat.
+            </p>
+            <div class="mission__actions">
+              <a class="btn btn--solid" href="https://t.me/SnowCatBSC" target="_blank" rel="noopener noreferrer">Join Snowpack</a>
+              <a class="btn btn--ghost" href="https://x.com/SnowCatBSC" target="_blank" rel="noopener noreferrer">Follow on X</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Community ──────────────────────────────────────────────────── -->
+    <section class="section" id="community" aria-labelledby="community-h">
+      <div class="shell">
+        <header class="section__head" data-reveal>
+          <p class="eyebrow">Community</p>
+          <h2 class="h2" id="community-h">Join the Snowpack</h2>
+          <p class="section__sub">Everything happens in these two rooms.</p>
+        </header>
+
+        <div class="socials">
+          <a class="glass social" href="https://x.com/SnowCatBSC" target="_blank" rel="noopener noreferrer" data-reveal>
+            <span class="social__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 1.153h3.682l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.152h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" /></svg>
+            </span>
+            <span class="social__text">
+              <strong>X</strong>
+              <em>@SnowCatBSC</em>
+            </span>
+            <span class="social__arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" /></svg>
+            </span>
+          </a>
+
+          <a class="glass social" href="https://t.me/SnowCatBSC" target="_blank" rel="noopener noreferrer" data-reveal>
+            <span class="social__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0Zm5.55 8.02-1.86 8.78c-.14.62-.51.77-1.03.48l-2.85-2.1-1.37 1.32c-.15.15-.28.28-.58.28l.2-2.92 5.32-4.8c.23-.2-.05-.32-.36-.12l-6.57 4.14-2.83-.88c-.62-.2-.63-.62.13-.92l11.06-4.26c.51-.19.96.12.74 1Z" /></svg>
+            </span>
+            <span class="social__text">
+              <strong>Telegram</strong>
+              <em>t.me/SnowCatBSC</em>
+            </span>
+            <span class="social__arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" /></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ── Footer ───────────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="shell footer__inner">
+      <div class="footer__brand">
+        <a class="wordmark wordmark--sm" href="#top" aria-label="SNOWCAT — back to top">
+          <span>SNOW</span>
+          <svg class="wordmark__flake" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+              <path d="M12 2v20M3.34 7l17.32 10M3.34 17L20.66 7" />
+              <path d="M12 5.6 9.9 3.5M12 5.6l2.1-2.1M12 18.4l-2.1 2.1M12 18.4l2.1 2.1" />
+              <path d="m6.2 8.9-2.87-.77M6.2 8.9l.77-2.87M17.8 15.1l2.87.77M17.8 15.1l-.77 2.87" />
+              <path d="m6.2 15.1-.77 2.87M6.2 15.1l-2.87.77M17.8 8.9l.77-2.87M17.8 8.9l2.87-.77" />
+            </g>
+          </svg>
+          <span>CAT</span>
+        </a>
+        <p class="footer__ticker">$SNCAT <span aria-hidden="true">·</span> BNB Smart Chain</p>
+      </div>
+
+      <ul class="footer__social" aria-label="Social links">
+        <li>
+          <a href="https://x.com/SnowCatBSC" target="_blank" rel="noopener noreferrer" aria-label="SNOWCAT on X">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 1.153h3.682l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.152h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" /></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://t.me/SnowCatBSC" target="_blank" rel="noopener noreferrer" aria-label="SNOWCAT on Telegram">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0Zm5.55 8.02-1.86 8.78c-.14.62-.51.77-1.03.48l-2.85-2.1-1.37 1.32c-.15.15-.28.28-.58.28l.2-2.92 5.32-4.8c.23-.2-.05-.32-.36-.12l-6.57 4.14-2.83-.88c-.62-.2-.63-.62.13-.92l11.06-4.26c.51-.19.96.12.74 1Z" /></svg>
+          </a>
+        </li>
+      </ul>
+
+      <p class="footer__ca">
+        <span>Contract</span>
+        <code>0x18D1632B35071CD965B0679854E28383d6F983b6</code>
+      </p>
+
+      <p class="footer__disclaimer">
+        $SNCAT is a meme token with no intrinsic value and no expectation of financial return.
+        Nothing on this site is financial advice. Crypto is risky and you can lose everything you
+        put in — only spend what you can afford to lose, and always do your own research.
+      </p>
+
+      <p class="footer__legal">&copy; 2026 SNOWCAT. Made in the cold.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
