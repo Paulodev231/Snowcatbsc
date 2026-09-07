@@ -207,7 +207,9 @@ main, .nav, .footer { position: relative; z-index: 2; }
 
 .hero__title {
   font-weight: 900;
-  font-size: clamp(3.1rem, 14.6vw, 9rem);
+  /* Width drives the size, but a short viewport (landscape phone) caps it so
+     the wordmark can't crowd out the tagline and buttons. */
+  font-size: clamp(3.1rem, min(14.6vw, 24svh), 9rem);
   letter-spacing: 0.02em;
   line-height: 0.95;
   margin-block: 0.28em 0.16em;

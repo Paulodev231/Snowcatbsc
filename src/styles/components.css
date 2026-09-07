@@ -181,6 +181,12 @@
   padding: 10px;
   border-radius: var(--r-xl);
   overflow: hidden;
+  /* Stacked (below 860px) a square image would otherwise run the full width of
+     a tablet and push the copy off screen. No effect on phones. */
+  max-width: 26rem;
+}
+@media (min-width: 860px) {
+  .frame { max-width: none; }
 }
 .frame img {
   width: 100%;
