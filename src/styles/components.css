@@ -316,19 +316,18 @@
 .social:hover .social__arrow { transform: translate(3px, -3px); }
 
 /* ── Scroll reveal ──────────────────────────────────────────────────── */
-[data-reveal] {
+/* Scoped to .js so the page stays fully readable without JavaScript. */
+.js [data-reveal] {
   opacity: 0;
   transform: translateY(22px);
   will-change: opacity, transform;
 }
-[data-reveal].is-in {
+.js [data-reveal].is-in {
   opacity: 1;
   transform: none;
   transition: opacity 700ms var(--ease), transform 700ms var(--ease);
   will-change: auto;
 }
-/* If JS never runs, content must still be visible */
-.no-js [data-reveal] { opacity: 1; transform: none; }
 
 /* ── Anchor offset under the fixed nav ──────────────────────────────── */
 [id] { scroll-margin-top: calc(var(--nav-h) + 1.25rem); }
@@ -343,6 +342,6 @@
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
   }
-  [data-reveal] { opacity: 1; transform: none; }
+  .js [data-reveal] { opacity: 1; transform: none; }
   .btn:hover, .card:hover, .social:hover, .footer__social a:hover { transform: none; }
 }

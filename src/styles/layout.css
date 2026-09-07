@@ -103,7 +103,7 @@ main, .nav, .footer { position: relative; z-index: 2; }
   transition: color var(--t-fast) var(--ease);
 }
 .wordmark:hover { color: var(--ice-300); }
-.wordmark span:last-child { margin-left: -0.28em; } /* trailing letter-space */
+.wordmark span:first-child { margin-right: -0.28em; } /* eat the trailing letter-space */
 .wordmark__flake {
   width: 0.82em;
   height: 0.82em;
@@ -206,7 +206,7 @@ main, .nav, .footer { position: relative; z-index: 2; }
 
 .hero__title {
   font-weight: 900;
-  font-size: clamp(3rem, 13.2vw, 8.75rem);
+  font-size: clamp(3.1rem, 14.6vw, 9rem);
   letter-spacing: 0.02em;
   line-height: 0.95;
   margin-block: 0.28em 0.16em;
@@ -275,6 +275,9 @@ main, .nav, .footer { position: relative; z-index: 2; }
   gap: clamp(2rem, 5vw, 3.5rem);
   align-items: center;
 }
+.split__copy {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+}
 .split__copy .btn { margin-top: 1.75rem; }
 
 @media (min-width: 860px) {
@@ -298,7 +301,7 @@ main, .nav, .footer { position: relative; z-index: 2; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 42%;
+  object-position: 56% 34%;
 }
 .mission__veil {
   position: absolute;

@@ -38,6 +38,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="image" href="/images/hero-cat.jpg" fetchpriority="low" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Reveal animations are only armed when JS is available, so the page is
+       fully readable if the bundle fails to load. -->
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 
 <body>
@@ -84,23 +88,25 @@
   <main id="main">
     <!-- ── Hero ───────────────────────────────────────────────────────── -->
     <section class="section hero" id="top">
-      <div class="shell hero__inner">
-        <p class="badge" data-reveal>
-          <span class="badge__dot" aria-hidden="true"></span>
-          BSC Chain <span aria-hidden="true">·</span> $SNCAT
-        </p>
+      <div class="shell">
+        <div class="hero__inner">
+          <p class="badge" data-reveal>
+            <span class="badge__dot" aria-hidden="true"></span>
+            BSC Chain <span aria-hidden="true">·</span> $SNCAT
+          </p>
 
-        <h1 class="hero__title" data-reveal>SNOWCAT</h1>
-        <p class="hero__tagline" data-reveal>The Coldest Revolution</p>
+          <h1 class="hero__title" data-reveal>SNOWCAT</h1>
+          <p class="hero__tagline" data-reveal>The Coldest Revolution</p>
 
-        <p class="hero__lede" data-reveal>
-          Born from the frozen peaks of meme culture. SNOWCAT came down the mountain with a
-          snowboard, a community and nothing to lose — the coldest cat on BNB Smart Chain.
-        </p>
+          <p class="hero__lede" data-reveal>
+            Born from the frozen peaks of meme culture. SNOWCAT came down the mountain with a
+            snowboard, a community and nothing to lose — the coldest cat on BNB Smart Chain.
+          </p>
 
-        <div class="hero__actions" data-reveal>
-          <a class="btn btn--solid" href="https://t.me/SnowCatBSC" target="_blank" rel="noopener noreferrer">Join Snowpack</a>
-          <a class="btn btn--ghost" href="#tokenomics">View Tokenomics</a>
+          <div class="hero__actions" data-reveal>
+            <a class="btn btn--solid" href="https://t.me/SnowCatBSC" target="_blank" rel="noopener noreferrer">Join Snowpack</a>
+            <a class="btn btn--ghost" href="#tokenomics">View Tokenomics</a>
+          </div>
         </div>
       </div>
 
@@ -149,7 +155,7 @@
                alt="SNOWCAT, a white cat in ski goggles and a black puffer jacket, holding a $SNOWCAT snowboard on a snowy mountainside." />
         </figure>
 
-        <div class="split__copy" data-reveal>
+        <div class="glass split__copy" data-reveal>
           <p class="eyebrow">About</p>
           <h2 class="h2" id="about-h">Cool. Fluffy. Unstoppable.</h2>
           <p>
